@@ -189,7 +189,7 @@ than typecasts and calculations.
 ## Simulation
 
 A testbench is supplied in <tt>cmd_proc_tb.vhdl</tt>. There is no serial
-port; the interface is exercized directly. The address and data buses are
+port; the interface is exercised directly. The address and data buses are
 both 16 bits wide. The four supported commands are given in this order:
 ASCII read, binary read, ASCII write, binary write.
 
@@ -219,19 +219,19 @@ The addres layout is as follows:
     Use it to check the endianness of the receiving program. The most
     significant end is transmitted first.</dd>
 
-<dd>address 1 (0x0001)</dt>
-<dt>The lower 8 bits of the data word written to this address are placed on
+<dt>address 1 (0x0001)</dt>
+<dd>The lower 8 bits of the data word written to this address are placed on
     output pins. Connect these to your status LEDs. The current state of the
-    pins can be read back from the same address.</dt>
+    pins can be read back from the same address.</dd>
 
-<dd>address 2 (0x0002)</dd>
-<dt>This is a 32-bit scratch register that can read and written. The
-    contents have no effect; it's storage only.</dt>
+<dt>address 2 (0x0002)</dt>
+<dd>This is a 32-bit scratch register that can read and written. The
+    contents have no effect; it's storage only.</dd>
 
-<dd>address 256 (0x0100)</dd>
-<dt>This is a 32-bit counter that is incremented by one on every system
+<dt>address 256 (0x0100)</dt>
+<dd>This is a 32-bit counter that is incremented by one on every system
     clock cycle. Writes have no effect. If you know the clock frequency,
-    this allows you to assess the performance of the system.</dt>
+    this allows you to assess the performance of the system.</dd>
 </dl>
 
 ## Simplicity  
